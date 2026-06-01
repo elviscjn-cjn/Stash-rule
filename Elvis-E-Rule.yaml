@@ -1325,6 +1325,22 @@ proxies:
       path: /videotahyjhghmuaawe
       headers:
         Host: d1.berrycdn-3.com
+  - name: 台湾-Hinet专线
+    type: vless
+    server: d1.868863.xyz
+    port: 37001
+    uuid: 68cbbc57-bba9-4db7-9fba-ec99d84ddfb1
+    alterId: 0
+    cipher: auto
+    udp: true
+    flow: xtls-rprx-vision
+    tls: true
+    skip-cert-verify: false
+    servername: www.bing.com
+    reality-opts:
+      public-key: rCFjWBuyeXg3-JCZ7pgsfF2njuT_TlzOa7EfD_fbbi0
+      short-id: 03694ac7f76e29
+    client-fingerprint: ios
   - name: "英国-线路1 | TCP"
     type: trojan
     server: resolution1.entrance.868863.xyz
@@ -1902,6 +1918,7 @@ proxy-groups:
       - "加拿大-线路1 | TCP"
       - "加拿大-CMI专线1"
       - "加拿大-线路4 | HY2"
+      - "台湾-Hinet专线"
       - "台湾-线路1 | TCP"
       - "台湾-CMI专线1"
       - "英国-线路1 | TCP"
@@ -2100,6 +2117,38 @@ proxy-groups:
       - "US🐲™️【免费共享】 9"
       - "US🐲™️【免费共享】 10"
 
+  - name: "专线"
+    type: select
+    proxies: 
+      - "美国A-CMI专线1"
+      - "美国A-CMI专线2"
+      - "美国B-CMI专线1"
+      - "美国B-CMI专线2"
+      - "美国C-CMI专线1"
+      - "美国C-CMI专线2"
+      - "德国-CMI专线1"
+      - "德国-CMI专线2"
+      - "加拿大-CMI专线1"
+      - "台湾-CMI专线1"
+      - "英国-CMI专线1"
+      - "新加坡A-CMI专线1"
+      - "新加坡A-CMI专线2"
+      - "新加坡B-CMI专线1"
+      - "新加坡B-CMI专线2"
+      - "新加坡C-CMI专线1"
+      - "新加坡C-CMI专线2"
+      - "香港A-CMI专线1"
+      - "香港B-CMI专线1"
+      - "香港C-CMI专线2"
+      - "日本A-CMI专线1"
+      - "日本A-CMI专线2"
+      - "日本B-CMI专线1"
+      - "日本B-CMI专线2"
+      - "日本C-CMI专线1"
+      - "日本C-CMI专线2"
+      - "摩尔多瓦-CMI专线1"
+      - "越南-CMI专线1"     
+
   - name: "出站🚉"
     type: url-test
     url: "http://www.gstatic.com/generate_204"
@@ -2137,6 +2186,7 @@ proxy-groups:
       - "加拿大-线路4 | HY2"
       - "台湾-线路1 | TCP"
       - "台湾-CMI专线1"
+      - "台湾-Hinet专线"
       - "英国-线路1 | TCP"
       - "英国-CMI专线1"
       - "新加坡A-线路1 | TCP"
@@ -2272,6 +2322,34 @@ proxy-groups:
       - "美国C-CMI专线2"
       - "加拿大-CMI专线1"
 
+
+  - name: "AI"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 600
+    tolerance: 100
+    proxies:
+      - "美国A-CMI专线1"
+      - "美国A-CMI专线2"
+      - "美国B-CMI专线1"
+      - "美国B-CMI专线2"
+      - "美国C-CMI专线1"
+      - "美国C-CMI专线2"
+      - "加拿大-CMI专线1"
+      - "新加坡A-CMI专线1"
+      - "新加坡A-CMI专线2"
+      - "新加坡B-CMI专线1"
+      - "新加坡B-CMI专线2"
+      - "新加坡C-CMI专线1"
+      - "新加坡C-CMI专线2"
+      - "日本A-CMI专线1"
+      - "日本A-CMI专线2"
+      - "日本B-CMI专线1"
+      - "日本B-CMI专线2"
+      - "日本C-CMI专线1"
+      - "日本C-CMI专线2"      
+            
+
   - name: "COC"
     type: url-test
     url: "http://www.gstatic.com/generate_204"
@@ -2297,15 +2375,6 @@ proxy-groups:
       - "TW🐲™️【免费共享】 8"
       - "TW🐲™️【免费共享】 9"
       - "TW🐲™️【免费共享】 10"
-
-  - name: "TRADING🥸"
-    type: url-test
-    url: "http://www.gstatic.com/generate_204"
-    interval: 600
-    tolerance: 100
-    proxies:
-      - "🇨🇳 台湾节点"
-      - "🇰🇷 韩国节点"
 
   - name: "抖音"
     type: select
@@ -2417,6 +2486,15 @@ proxy-groups:
     proxies:
       - "🌐 全球直连"
 
+  - name: "台湾专线(crypto)"
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 600
+    tolerance: 100
+    proxies:
+      - "台湾-CMI专线1"
+      - "台湾-Hinet专线"
+
   - name: "🇭🇰 香港节点"
     type: url-test
     url: "http://www.gstatic.com/generate_204"
@@ -2478,6 +2556,7 @@ proxy-groups:
     proxies:
       - "台湾-线路1 | TCP"
       - "台湾-CMI专线1"
+      - "台湾-Hinet专线"
       - "TW🐲™️【免费共享】"
       - "TW🐲™️【免费共享】 2"
       - "TW🐲™️【免费共享】 3"
@@ -2595,57 +2674,6 @@ proxy-groups:
       - "越南-线路1 | TCP"
       - "越南-CMI专线1"
 rules:
-  # ━━━━━━━━━━━━━━ Web3 加密货币与交易 ━━━━━━━━━━━━━━
-
-  # Interactive Brokers
-  - "DOMAIN-KEYWORD,interactivebrokers,🗽US专线&US券商"
-
-  # Binance
-  - "DOMAIN-SUFFIX,binance.com,TRADING🥸"
-
-  # Bitget
-  - "DOMAIN-SUFFIX,appapi.bitget.com,🇰🇷 韩国节点"
-  - "DOMAIN-SUFFIX,stream.bitget.com,🇰🇷 韩国节点"
-  - "DOMAIN-SUFFIX,testimg.bitgetapp.com,🇰🇷 韩国节点"
-
-  # TradingView
-  - "DOMAIN-SUFFIX,tradingview.com,🗽US专线&US券商"
-
-  # ━━━━━━━━━━━━━━ 广告拦截 ━━━━━━━━━━━━━━
-
-  # AdBlock Core
-  - "GEOSITE,category-ads-all,REJECT"
-  - "DOMAIN-SUFFIX,app-analytics-services.com,REJECT"
-  - "DOMAIN-SUFFIX,www.google-analytics.com,REJECT"
-
-  # ━━━━━━━━━━━━━━ AI 生产力核心 ━━━━━━━━━━━━━━
-
-  # OpenAI / ChatGPT
-  - "GEOSITE,openai,🗽US专线&US券商"
-  - "DOMAIN-KEYWORD,openai,🗽US专线&US券商"
-  - "DOMAIN-SUFFIX,openai.com,🗽US专线&US券商"
-
-  # Grok / X AI
-  - "DOMAIN-SUFFIX,grok.com,🗽US专线&US券商"
-  - "DOMAIN-SUFFIX,grok.x.com,🗽US专线&US券商"
-
-  # Poe
-  - "DOMAIN-SUFFIX,poe.com,🗽US专线&US券商"
-
-  # Gemini / Google AI
-  - "DOMAIN-SUFFIX,lh3.googleusercontent.com,🗽US专线&US券商"
-  - "DOMAIN-KEYWORD,gemini,🗽US专线&US券商"
-  - "DOMAIN-KEYWORD,gemini,🗽US专线&US券商"
-
-  # Claude / Anthropic
-  - "DOMAIN-SUFFIX,anthropic.com,🗽US专线&US券商"
-  - "DOMAIN-KEYWORD,claude,🗽US专线&US券商"
-
-  # GitHub Copilot / AI 相关
-  - "DOMAIN-SUFFIX,github.com,🗽US专线&US券商"
-  - "DOMAIN-KEYWORD,github,🗽US专线&US券商"
-  - "DOMAIN-SUFFIX,github.com,🗽US专线&US券商"
-  - "DOMAIN-SUFFIX,githubusercontent.com,🗽US专线&US券商"
 
   # ━━━━━━━━━━━━━━ 基础网络与局域网 ━━━━━━━━━━━━━━
 
@@ -2658,6 +2686,136 @@ rules:
   - "IP-CIDR,17.0.0.0/8,🌐 全球直连"
   - "IP-CIDR,100.64.0.0/10,🌐 全球直连"
   - "IP-CIDR6,fe80::/10,🌐 全球直连"
+
+  # ━━━━━━━━━━━━━━ 广告拦截 ━━━━━━━━━━━━━━
+
+  # AdBlock Core
+  - "GEOSITE,category-ads-all,REJECT"
+  - "DOMAIN-SUFFIX,app-analytics-services.com,REJECT"
+  - "DOMAIN-SUFFIX,www.google-analytics.com,REJECT"
+
+  # ━━━━━━━━━━━━━━ GITHUB (开发者核心 / 防卡死) ━━━━━━━━━━━━━━
+  - "DOMAIN-SUFFIX,github.com,AI"
+  - "DOMAIN-KEYWORD,github,AI"
+  - "DOMAIN-SUFFIX,github.com,AI"
+  - "DOMAIN-SUFFIX,githubusercontent.com,AI"
+
+  # ━━━━━━━━━━━━━━ AI 生产力核心 ━━━━━━━━━━━━━━
+
+  # OpenAI / ChatGPT
+  - "GEOSITE,openai,AI"
+  - "DOMAIN-KEYWORD,openai,AI"
+  - "DOMAIN-SUFFIX,openai.com,AI"
+
+  # Grok / X AI
+  - "DOMAIN-SUFFIX,grok.com,AI"
+  - "DOMAIN-SUFFIX,grok.x.com,AI"
+
+  # Poe
+  - "DOMAIN-SUFFIX,poe.com,AI"
+
+  # Gemini / Google AI
+  - "DOMAIN-SUFFIX,lh3.googleusercontent.com,AI"
+  - "DOMAIN-KEYWORD,gemini,AI"
+  - "DOMAIN-KEYWORD,gemini,AI"
+
+  # Claude / Anthropic
+  - "DOMAIN-SUFFIX,anthropic.com,AI"
+  - "DOMAIN-KEYWORD,claude,AI"
+# 其他 AI
+  - "DOMAIN-SUFFIX,poe.com,AI" 
+  - "RULE-SET,https://yfamilys.com/rule/ai.list,AI"
+  - "DOMAIN-SUFFIX,yfamilys.com,AI"
+
+    # ━━━━━━━━━━━━━━ Web3 CRYPTO&TRADING ━━━━━━━━━━━━━━
+
+  # Binance
+  - "DOMAIN-SUFFIX,binance.com,台湾专线(crypto)"
+
+  # Bitget
+  - "DOMAIN-SUFFIX,appapi.bitget.com,台湾专线(crypto)"
+  - "DOMAIN-SUFFIX,stream.bitget.com,台湾专线(crypto)"
+  - "DOMAIN-SUFFIX,testimg.bitgetapp.com,台湾专线(crypto)"
+
+# Plasma
+  - "DOMAIN-KEYWORD,plasma,🗽US专线&US券商"
+
+  # TradingView
+  - "DOMAIN-SUFFIX,tradingview.com,🗽US专线&US券商"
+
+
+  # ━━━━━━━━━━━━━━ 金融与数字银行 ━━━━━━━━━━━━━━
+
+  # China Construction Bank
+  - "DOMAIN-SUFFIX,ccb.com,🌐 全球直连"
+  - "DOMAIN-SUFFIX,xc.ebanking3.ccb.com.cn,🌐 全球直连"
+  - "DOMAIN-SUFFIX,ebanking1.ccb.com.cn,🌐 全球直连"
+  - "DOMAIN-SUFFIX,touch.ccb.com,🌐 全球直连"
+  - "DOMAIN-SUFFIX,xc.mobile3.ccb.cn,🌐 全球直连"
+  - "DOMAIN-SUFFIX,mbs.ccb.com,🌐 全球直连"
+
+  # WeLab Bank
+  - "DOMAIN-SUFFIX,welab.bank,🌐 全球直连"
+  - "DOMAIN-KEYWORD,welab.bank,🌐 全球直连"
+  - "DOMAIN-SUFFIX,t1.welab.bank,🌐 全球直连"
+  - "DOMAIN-SUFFIX,content.welab.bank,🌐 全球直连"
+
+  # ZA Bank
+  - "DOMAIN-SUFFIX,za.group,🌐 全球直连"
+
+  # N26 Bank
+  - "DOMAIN-KEYWORD,n26,🇩🇪 德国"
+  - "DOMAIN-SUFFIX,n26-admedia.s3.eu-central-1.amazonaws.com,🇩🇪 德国"
+  - "DOMAIN-SUFFIX,engagementplatform.n26.com,🇩🇪 德国"
+  - "DOMAIN-KEYWORD,n26.com,🇩🇪 德国"
+  - "DOMAIN-SUFFIX,engagementplatform.n26.com,🇩🇪 德国"
+
+# iFAST Global Bank
+  - "DOMAIN-KEYWORD,ifastgb,🌐 全球直连"
+  - "DOMAIN-SUFFIX,communication-app.ifastgb.com,🌐 全球直连"
+  - "DOMAIN-SUFFIX,sentry.ifastgb.com,🌐 全球直连"
+
+  # ━━━━━━━━━━━━━━ US-券商 ━━━━━━━━━━━━━━━
+# Charles Schwab (嘉信理财)
+  - "DOMAIN-KEYWORD,schwab,US专线/US券商"
+
+# TD Ameritrade (Thinkorswim)
+  - "DOMAIN-KEYWORD,thinkorswim,US专线/US券商"
+
+# Interactive Brokers (盈透证券)
+  - "DOMAIN-KEYWORD,interactivebrokers,US专线/US券商"
+  - "DOMAIN-SUFFIX,ibkr,US专线/US券商"
+
+# Firstrade (第一证券)
+  - "DOMAIN-KEYWORD,firstrade,US专线/US券商"
+  # ━━━━━━━━━━━━━━ HK-券商 ━━━━━━━━━━━━━━
+  # chief (致富证券)
+  - "DOMAIN-KEYWORD,chief,🌐 全球直连"
+  - "DOMAIN-KEYWORD,chieftrader1979,🌐 全球直连"
+  - "DOMAIN-SUFFIX,chief-deposit.cm-chiefgroup.com,🌐 全球直连"
+  - "DOMAIN-SUFFIX,chief-deposit.zft2025.com,🌐 全球直连"
+  - "DOMAIN-SUFFIX,chief-deposit.chiefgroup.com.hk,🌐 全球直连"
+  - "DOMAIN-KEYWORD,chieftrader,🌐 全球直连"
+
+
+#          (盈立证券)
+
+
+# Giga money (腾达证券)
+
+
+#          (卓锐证券)
+
+
+#          (复星国际证券)
+
+
+# 国际支付 (Wise)
+  - "DOMAIN-KEYWORD,wise.com,🌐 全球直连"
+
+# 国际支付 (PayPal)
+  - "RULE-SET,https://yfamilys.com/rule/PayPal.list,🪙 PAYPAL[直连]"
+
 
   # ━━━━━━━━━━━━━━ 游戏分流 (COC/英雄联盟) ━━━━━━━━━━━━━━
 
@@ -2692,39 +2850,44 @@ rules:
   - "DOMAIN,mesu.apple.com,🌐 全球直连"
   - "DOMAIN,xp.apple.com,🌐 全球直连"
   - "GEOSITE,apple,🍎 苹果服务[直连]"
+  - "DOMAIN-SUFFIX,apple.com,🌐 全球直连"
+  - "DOMAIN,appstoreconnect.apple.com,🌐 全球直连"
+  - "DOMAIN,itcmobile.itunes.apple.com,🌐 全球直连"
+  - "DOMAIN,mesu.apple.com,🌐 全球直连"
+  - "DOMAIN,gdmf.apple.com,🌐 全球直连"
+  - "DOMAIN,updates-http.cdn-apple.com,🌐 全球直连"
+  - "DOMAIN,xp.apple.com,🌐 全球直连"
+  - "RULE-SET,https://yfamilys.com/rule/Apple.list,🍎 苹果服务[直连]"
+  - "RULE-SET,https://yfamilys.com/rule/AppStore.list,🍎 苹果服务[直连]"
+  - "RULE-SET,https://yfamilys.com/rule/AppleProxy.list,➡️优先使用"
+  - "DOMAIN-SUFFIX,ec.pcms.apple.com,🌐 全球直连"
+  - "DOMAIN-SUFFIX,cstat.cdn-apple.com,🌐 全球直连"
+  - "DOMAIN-SUFFIX,app-site-association.cdn-apple.com,🌐 全球直连"
+  - "DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com,🌐 全球直连"
 
-  # ━━━━━━━━━━━━━━ 金融与数字银行 ━━━━━━━━━━━━━━
-
-  # China Construction Bank
-  - "DOMAIN-SUFFIX,ccb.com,🌐 全球直连"
-
-  # WeLab Bank
-  - "DOMAIN-SUFFIX,welab.bank,🌐 全球直连"
-
-  # ZA Bank
-  - "DOMAIN-SUFFIX,za.group,🌐 全球直连"
-
-  # PayPal
-  - "GEOSITE,paypal,🪙 Paypal[直连]"
-
-  # Wise
-  - "DOMAIN-KEYWORD,wise.com,🌐 全球直连"
-
+  
   # ━━━━━━━━━━━━━━ 社交媒体分流 ━━━━━━━━━━━━━━
 
   # X / Twitter
   - "GEOSITE,twitter,X"
   - "DOMAIN-KEYWORD,twitter,X"
   - "DOMAIN-SUFFIX,api.x.com,X"
-  - DOMAIN-SUFFIX,chat-ws.x.com,X
-  - DOMAIN-SUFFIX,probe.twitter.com,X
+  - "DOMAIN-SUFFIX,chat-ws.x.com,X"
+  - "DOMAIN-SUFFIX,probe.twitter.com,X"
+  - "RULE-SET,https://yfamilys.com/rule/Twitter.list,X"  
 
   # Telegram
   - "GEOSITE,telegram,📲 Telegram"
+  - "RULE-SET,https://yfamilys.com/rule/Telegram.list,📲 TELEGRAM"
 
   # Meta / Instagram / Facebook
-  - "GEOSITE,instagram,➡️优先使用"
-  - "GEOSITE,facebook,➡️优先使用"
+  - "DOMAIN-KEYWORD,instagram,➡️优先使用"
+  - "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Instagram/Instagram.list,➡️优先使用"
+  - "DOMAIN-SUFFIX,graph.instagram.com,➡️优先使用"
+  - "DOMAIN-SUFFIX,app-analytics-services.com,➡️优先使用"
+  - "DOMAIN-SUFFIX,graph.facebook.com,➡️优先使用"
+  - "DOMAIN-SUFFIX,graph.instagram.com,➡️优先使用"
+  - "RULE-SET,https://yfamilys.com/rule/Facebook.list,👤 FACEBOOK"
 
   # Discord
   - "GEOSITE,discord,🐦 Discord"
@@ -2733,19 +2896,64 @@ rules:
   - "GEOSITE,reddit,📖 Reddit"
 
   # TikTok
-  - "GEOSITE,tiktok,CDN"
+  - "DOMAIN-SUFFIX,p16-common.tiktokcdn-us.com,CDN"
   - "DOMAIN-KEYWORD,tiktok,CDN"
+  - "DOMAIN-KEYWORD,musical.ly,CDN"
+  - "DOMAIN-SUFFIX,tiktok.com,CDN"
   - "DOMAIN-SUFFIX,tiktokv.com,CDN"
+  - "DOMAIN-SUFFIX,tiktokv.eu,CDN"  
+  - "DOMAIN-SUFFIX,tiktokv.us,CDN"
+  - "DOMAIN-SUFFIX,tiktokcdn.com,CDN"
+  - "DOMAIN-SUFFIX,tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,v16m.tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,v19.tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,v45.tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,v16-cla.tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,v19-cla.tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,p16-sign-sg.tiktokcdn.com,CDN"
+  - "DOMAIN-SUFFIX,p16-sign-va.tiktokcdn.com,CDN"
+  - "DOMAIN-SUFFIX,p16-tiktok-dm-sticker-sign.tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,p16-tiktok-dm-sticker-sign-useast8.tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,p16-comment-sg-sign.tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,p16-comment-sign-useast8.tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,p16-oec-ttp.tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,p19-oec-ttp.tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,p16-tako-img-gen-useast5.tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,p16-tako-internal-common-useast5.tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,lf16-pitaya-pkg-sign.tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,lf19-pitaya-pkg-sign.tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,aggr16-normal.tiktokv.us,CDN"
+  - "DOMAIN-SUFFIX,aggr32-normal.tiktokv.eu,CDN"
+  - "DOMAIN-SUFFIX,api-core.tiktokv.com,CDN"
+  - "DOMAIN-SUFFIX,api16-normal-useast5.tiktokv.us,CDN"
+  - "DOMAIN-SUFFIX,api16-normal-useast8.tiktokv.us,CDN"
+  - "DOMAIN-SUFFIX,api19-core-useast5.tiktokv.us,CDN"
+  - "DOMAIN-SUFFIX,api19-normal-useast5.tiktokv.us,CDN"
+  - "DOMAIN-SUFFIX,api19-normal-useast8.tiktokv.us,CDN"
+  - "DOMAIN-SUFFIX,frontier.tiktokv.us,CDN"
+  - "DOMAIN-SUFFIX,log16-normal-useast5.tiktokv.us,CDN"
+  - "DOMAIN-SUFFIX,oec19-normal-useast5.tiktokv.us,CDN"
+  - "DOMAIN-SUFFIX,webcast19-normal-useast5.tiktokv.us,CDN"
+  - "DOMAIN-SUFFIX,pull-f5-tt04.tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,pull-flv-f77-sg01.tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,pull-flv-l77-tt02.tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,sf-teko-source.tiktokcdn-us.com,CDN"
+  - "DOMAIN-SUFFIX,roovza.launches.appsflyersdk.com,CDN"
+  - "DOMAIN-KEYWORD,hellotik.app,🌐 全球直连"
 
   # ━━━━━━━━━━━━━━ 流媒体娱乐 ━━━━━━━━━━━━━━
 
   # YouTube / Google Video
-  - "DOMAIN-KEYWORD,googlevideo.com,VPS🛜"
-  - GEOSITE,youtube,➡️优先使用
-  - DOMAIN-SUFFIX,yt3.googleusercontent.com,➡️优先使用
-  - DOMAIN-SUFFIX,rr3---sn-i3belney.googlevideo.com,➡️优先使用
-  - DOMAIN-SUFFIX,rr4---sn-un57snee.googlevideo.com,CDN
-  - DOMAIN-SUFFIX,rr5---sn-oji3bc-5n.googlevideo.com,➡️优先使用
+  - "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/YouTube/YouTube.list,➡️优先使用"
+  - "RULE-SET,https://yfamilys.com/rule/YouTube.list,➡️优先使用"
+  - "RULE-SET,https://yfamilys.com/rule/YouTubeMusic.list,➡️优先使用"
+  - "DOMAIN-SUFFIX,www.youtube.com,➡️优先使用"
+  - "DOMAIN-KEYWORD,youtube,➡️优先使用"
+  - "DOMAIN-SUFFIX,yt3.googleusercontent.com,➡️优先使用"
+  - "DOMAIN-SUFFIX,rr3---sn-i3belney.googlevideo.com,➡️优先使用"
+  - "DOMAIN-SUFFIX,rr4---sn-un57snee.googlevideo.com,CDN"
+  - "DOMAIN-SUFFIX,rr5---sn-oji3bc-5n.googlevideo.com,➡️优先使用"
+  - "RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/YouTube/YouTube.list,➡️优先使用"
 
   # Netflix
   - GEOSITE,netflix,🎥 Netflix
@@ -2793,24 +3001,51 @@ rules:
   - DOMAIN-SUFFIX,dataflow.biliapi.com,📽 哔哩哔哩[直连]
   - DOMAIN-SUFFIX,broadcast.chat.bilibili.com,🌐 全球直连
 
-  # NetEase
-  - GEOSITE,netease,🌐 全球直连
+  # 网易云音乐
+  - DOMAIN-SUFFIX,httpdns.music.163.com,🌐 全球直连
+  - DOMAIN-SUFFIX,httpdns.music.163.com,🌐 全球直连
+  - RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/NetEaseMusic/NetEaseMusic.list,🌐 全球直连
 
-  # Baidu
-  - GEOSITE,baidu,🌐 全球直连
+# 百度
+  - RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Baidu/Baidu.list,🌐 全球直连
   - DOMAIN-KEYWORD,baidu,🌐 全球直连
 
-  # Tencent
-  - GEOSITE,tencent,🌐 全球直连
+# 豆瓣
+  - RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/DouBan/DouBan.list,🌐 全球直连
 
-  # JD
-  - GEOSITE,jd,🌐 全球直连
+# 腾讯/微信
+  - RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/WeChat/WeChat.list,🌐 全球直连
+  - RULE-SET,https://yfamilys.com/rule/WeChat.list,🌐 全球直连
 
-  # Meituan
+# 新浪微博
+  - RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Sina/Sina.list,🌐 全球直连
+  - RULE-SET,https://yfamilys.com/rule/Weibo.list,🍟 新浪微博
+  - DOMAIN-KEYWORD,weibo,🍟 新浪微博
+
+# 知乎
+  - RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Zhihu/Zhihu.list,🌐 全球直连
+
+# 小红书
+  - RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/XiaoHongShu/XiaoHongShu.list,🌐 全球直连
+
+#京东
+  - DOMAIN-SUFFIX,jd.com,🌐 全球直连
+
+# 美团
   - DOMAIN-KEYWORD,meituan,🌐 全球直连
 
-  # China Domestic Misc
+
+# 斗鱼
+  - RULE-SET,https://yfamilys.com/rule/Douyu.list,🌐 全球直连
+
+
+# China Domestic Misc
   - IP-CIDR,203.119.206.9/32,🌐 全球直连
+
+# 国内媒体
+  - RULE-SET,https://yfamilys.com/rule/ChinaMedia.list,🍔 国内媒体[直连]
+
+
 
   # ━━━━━━━━━━━━━━ Google Edge 基础框架与杂项 ━━━━━━━━━━━━━━
 
@@ -2826,42 +3061,22 @@ rules:
   # Microsoft
   - GEOSITE,microsoft,Ⓜ️ 微软服务[直连]
 
-  # Custom Domain
+  # ━━━━━━━━━━━━━━ 私有域名━━━━━━━━━━━━━━
   - DOMAIN-SUFFIX,elviscjngood.ccwu.cc,➡️优先使用
-
-  # ━━━━━━━━━━━━━━ 本地服务 ━━━━━━━━━━━━━━
-
-  # League Akari
-  - 'PROCESS-PATH,D:\101\League.Akari-1.4.0-win,DIRECT'
-
-  # QQ / Tencent Workers
-  - "DOMAIN,https://136.0.197.4:14163/IE2P4yduao0xKJ7TDx/,VPS🛜"
-  - "DOMAIN,https://cloudflaresub.qq2049323189.workers.dev/,VPS🛜"
-
-  # iCloud
-  - "DOMAIN-KEYWORD,iCloud,DIRECT"
-
-  # Steam
-  - "DOMAIN-KEYWORD,steam,VPS🛜"
-  - "DOMAIN-SUFFIX,store.steampowered.com,VPS🛜"
-
-  # WeGame
-  - 'PROCESS-PATH,E:\WeGameApps,DIRECT'
-  - 'PROCESS-PATH,E:\WeGame,🌐 全球直连'
-
-  # Douyin Client
-  - 'PROCESS-PATH,D:\douyin,🌐 全球直连'
-
-  # Windhawk
-  - 'PROCESS-PATH,D:\an-zhuang-bao\Windhawk,➡️优先使用'
-  - 'PROCESS-PATH,D:\an-zhuang-bao\Windhawk,➡️优先使用'
-
-  # BerryPass
-  - "DOMAIN,https://berrypass.net/#/dashboard,VPS🛜"
 
   # ━━━━━━━━━━━━━━ 兜底分流 ━━━━━━━━━━━━━━
 
   # Routing Fallback
+  - RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/China/China.list,🌐 全球直连
+  - RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/China/China_Domain.list,🌐 全球直连
+  - RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaIPs/ChinaIPs.list,🌐 全球直连
+  - RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list,🌐 全球直连
+  - RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list,🌐 全球直连
+  - RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMedia/ChinaMedia.list,🌐 全球直连
+  - RULE-SET,https://yfamilys.com/rule/ASN-CN.list,🌐 全球直连
+  - RULE-SET,https://raw.githubusercontent.com/Centralmatrix3/Matrix-io/master/Shadowrocket/Ruleset/GEOIPCN.list,🌐 全球直连
+  - RULE-SET,https://yfamilys.com/rule/Proxy.list,➡️优先使用
+  - DOMAIN-SET,https://yfamilys.com/rule/Proxy.list,➡️优先使用
   - "GEOSITE,cn,🌐 全球直连"
   - "GEOIP,CN,🌐 全球直连"
   - "GEOSITE,geolocation-!cn,➡️优先使用"
