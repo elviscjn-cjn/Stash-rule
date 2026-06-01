@@ -2673,6 +2673,19 @@ proxy-groups:
       - "摩尔多瓦-CMI专线1"
       - "越南-线路1 | TCP"
       - "越南-CMI专线1"
+
+
+rule-providers:
+  yfamilys_ai:
+    type: http
+    behavior: classical
+    url: "https://yfamilys.com/rule/ai.list"
+    path: ./ruleset/yfamilys_ai.yaml
+    interval: 86400
+
+
+
+
 rules:
 
   # ━━━━━━━━━━━━━━ 基础网络与局域网 ━━━━━━━━━━━━━━
@@ -2724,7 +2737,7 @@ rules:
   - "DOMAIN-KEYWORD,claude,AI"
 # 其他 AI
   - "DOMAIN-SUFFIX,poe.com,AI" 
-  - "RULE-SET,https://yfamilys.com/rule/ai.list,AI"
+  - "RULE-SET,yfamilys_ai,AI" 
   - "DOMAIN-SUFFIX,yfamilys.com,AI"
 
     # ━━━━━━━━━━━━━━ Web3 CRYPTO&TRADING ━━━━━━━━━━━━━━
