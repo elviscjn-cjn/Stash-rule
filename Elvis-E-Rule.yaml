@@ -2675,15 +2675,6 @@ proxy-groups:
       - "越南-CMI专线1"
 
 
-rule-providers:
-  yfamilys_ai:
-    type: http
-    behavior: classical
-    url: "https://yfamilys.com/rule/ai.list"
-    path: ./ruleset/yfamilys_ai.yaml
-    interval: 86400
-
-
 
 
 rules:
@@ -2724,8 +2715,6 @@ rules:
   - "DOMAIN-SUFFIX,grok.com,AI"
   - "DOMAIN-SUFFIX,grok.x.com,AI"
 
-  # Poe
-  - "DOMAIN-SUFFIX,poe.com,AI"
 
   # Gemini / Google AI
   - "DOMAIN-SUFFIX,lh3.googleusercontent.com,AI"
@@ -2735,10 +2724,6 @@ rules:
   # Claude / Anthropic
   - "DOMAIN-SUFFIX,anthropic.com,AI"
   - "DOMAIN-KEYWORD,claude,AI"
-# 其他 AI
-  - "DOMAIN-SUFFIX,poe.com,AI" 
-  - "RULE-SET,yfamilys_ai,AI" 
-  - "DOMAIN-SUFFIX,yfamilys.com,AI"
 
     # ━━━━━━━━━━━━━━ Web3 CRYPTO&TRADING ━━━━━━━━━━━━━━
 
