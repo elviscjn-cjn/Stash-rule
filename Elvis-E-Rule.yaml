@@ -2601,6 +2601,7 @@ rules:
   - DOMAIN-KEYWORD,binance,台湾专线(crypto) # 币安
   - DOMAIN-KEYWORD,okx,台湾专线(crypto)
   - DOMAIN-KEYWORD,taobao,🌐 全球直连 # 淘宝
+  # ━━━━━━━━━━━━━━ 基础网络 / 本地直连 ━━━━━━━━━━━━━━
   # Localhost & LAN
   - DOMAIN,localhost,🌐 全球直连
   - IP-CIDR,127.0.0.0/8,🌐 全球直连
@@ -2610,6 +2611,7 @@ rules:
   - IP-CIDR,17.0.0.0/8,🌐 全球直连
   - IP-CIDR,100.64.0.0/10,🌐 全球直连
   - IP-CIDR6,fe80::/10,🌐 全球直连
+  # ━━━━━━━━━━━━━━ 广告屏蔽 / 安全 ━━━━━━━━━━━━━━
   # AdBlock Core
   - GEOSITE,category-ads-all,REJECT
   - DOMAIN-SUFFIX,app-analytics-services.com,REJECT
@@ -2619,6 +2621,7 @@ rules:
   - DOMAIN-KEYWORD,github,AI
   - DOMAIN-SUFFIX,github.com,AI
   - DOMAIN-SUFFIX,githubusercontent.com,AI
+  # ━━━━━━━━━━━━━━ AI / 开发者服务 ━━━━━━━━━━━━━━
   # OpenAI / ChatGPT
   - GEOSITE,openai,AI
   - DOMAIN-KEYWORD,openai,AI
@@ -2633,6 +2636,7 @@ rules:
   # Claude / Anthropic
   - DOMAIN-SUFFIX,anthropic.com,AI
   - DOMAIN-KEYWORD,claude,AI
+  # ━━━━━━━━━━━━━━ 金融 / 交易 / 加密 ━━━━━━━━━━━━━━
   # Binance
   - DOMAIN-SUFFIX,binance.com,台湾专线(crypto)
   # Bitget
@@ -2643,6 +2647,7 @@ rules:
   - DOMAIN-KEYWORD,plasma,🗽US专线&US券商
   # TradingView
   - DOMAIN-SUFFIX,tradingview.com,🗽US专线&US券商
+  # ━━━━━━━━━━━━━━ 银行 / 支付 ━━━━━━━━━━━━━━
   # China Construction Bank
   - DOMAIN-SUFFIX,ccb.com,🌐 全球直连
   - DOMAIN-SUFFIX,xc.ebanking3.ccb.com.cn,🌐 全球直连
@@ -2688,6 +2693,7 @@ rules:
   - DOMAIN-KEYWORD,wise.com,🌐 全球直连
   # 国际支付 (PayPal)
   - DOMAIN-KEYWORD,paypal,🌐 全球直连
+  # ━━━━━━━━━━━━━━ 游戏 / 数娱 ━━━━━━━━━━━━━━
   # Supercell / COC
   - DOMAIN-SUFFIX,clash-static.inbox-staging.supercell.com,COC
   - DOMAIN-SUFFIX,clash-static.inbox.supercell.com,COC
@@ -2705,6 +2711,7 @@ rules:
   - GEOSITE,nintendo,🎮 游戏平台[直连]
   # Blizzard
   - GEOSITE,blizzard,🎮 游戏平台[直连]
+  # ━━━━━━━━━━━━━━ Apple / iOS 服务 ━━━━━━━━━━━━━━
   # Apple
   - DOMAIN,appstoreconnect.apple.com,🌐 全球直连
   - DOMAIN,mesu.apple.com,🌐 全球直连
@@ -2721,6 +2728,8 @@ rules:
   - DOMAIN-SUFFIX,cstat.cdn-apple.com,🌐 全球直连
   - DOMAIN-SUFFIX,app-site-association.cdn-apple.com,🌐 全球直连
   - DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com,🌐 全球直连
+
+  # ━━━━━━━━━━━━━━ 社交 / 即时通讯 ━━━━━━━━━━━━━━
   # X / Twitter
   - GEOSITE,twitter,X
   - DOMAIN-KEYWORD,twitter,X
@@ -2784,6 +2793,8 @@ rules:
   - DOMAIN-SUFFIX,sf-teko-source.tiktokcdn-us.com,CDN
   - DOMAIN-SUFFIX,roovza.launches.appsflyersdk.com,CDN
   - DOMAIN-KEYWORD,hellotik.app,🌐 全球直连
+
+  # ━━━━━━━━━━━━━━ 视频 / 流媒体 ━━━━━━━━━━━━━━
   # YouTube / Google Video
   - DOMAIN-SUFFIX,www.youtube.com,➡️优先使用
   - DOMAIN-KEYWORD,youtube,➡️优先使用
@@ -2804,6 +2815,7 @@ rules:
   - DOMAIN-SUFFIX,client-rapi-missav.recombee.com,➡️优先使用
   # Hanime1
   - DOMAIN-SUFFIX,hanime1.me,H
+  # ━━━━━━━━━━━━━━ 国内 App 与字节系全家桶 (彻底直连) ━━━━━━━━━━━━━━
   # ByteDance / Douyin
   - DOMAIN-SUFFIX,douyin.com,🌐 全球直连
   - DOMAIN-SUFFIX,iesdouyin.com,🌐 全球直连
