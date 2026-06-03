@@ -2601,7 +2601,7 @@ rules:
   - DOMAIN-KEYWORD,binance,台湾专线(crypto) # 币安
   - DOMAIN-KEYWORD,okx,台湾专线(crypto)
   - DOMAIN-KEYWORD,taobao,🌐 全球直连 # 淘宝
-  # ━━━━━━━━━━━━━━ 基础网络 / 本地直连 ━━━━━━━━━━━━━━
+ # ━━━━━━━━━━━━━━ 基础网络与局域网 ━━━━━━━━━━━━━━
   # Localhost & LAN
   - DOMAIN,localhost,🌐 全球直连
   - IP-CIDR,127.0.0.0/8,🌐 全球直连
@@ -2611,11 +2611,13 @@ rules:
   - IP-CIDR,17.0.0.0/8,🌐 全球直连
   - IP-CIDR,100.64.0.0/10,🌐 全球直连
   - IP-CIDR6,fe80::/10,🌐 全球直连
-  # ━━━━━━━━━━━━━━ 广告屏蔽 / 安全 ━━━━━━━━━━━━━━
+
+  # ━━━━━━━━━━━━━━ 广告拦截 ━━━━━━━━━━━━━━
   # AdBlock Core
   - GEOSITE,category-ads-all,REJECT
   - DOMAIN-SUFFIX,app-analytics-services.com,REJECT
   - DOMAIN-SUFFIX,www.google-analytics.com,REJECT
+
   # ━━━━━━━━━━━━━━ GITHUB (开发者核心 / 防卡死) ━━━━━━━━━━━━━━
   - DOMAIN-SUFFIX,github.com,AI
   - DOMAIN-KEYWORD,github,AI
@@ -2636,7 +2638,7 @@ rules:
   # Claude / Anthropic
   - DOMAIN-SUFFIX,anthropic.com,AI
   - DOMAIN-KEYWORD,claude,AI
-  # ━━━━━━━━━━━━━━ 金融 / 交易 / 加密 ━━━━━━━━━━━━━━
+    # ━━━━━━━━━━━━━━ Web3 CRYPTO&TRADING ━━━━━━━━━━━━━━
   # Binance
   - DOMAIN-SUFFIX,binance.com,台湾专线(crypto)
   # Bitget
@@ -2647,7 +2649,8 @@ rules:
   - DOMAIN-KEYWORD,plasma,🗽US专线&US券商
   # TradingView
   - DOMAIN-SUFFIX,tradingview.com,🗽US专线&US券商
-  # ━━━━━━━━━━━━━━ 银行 / 支付 ━━━━━━━━━━━━━━
+  # ━━━━━━━━━━━━━━ 金融与数字银行 ━━━━━━━━━━━━━━
+
   # China Construction Bank
   - DOMAIN-SUFFIX,ccb.com,🌐 全球直连
   - DOMAIN-SUFFIX,xc.ebanking3.ccb.com.cn,🌐 全球直连
@@ -2672,6 +2675,8 @@ rules:
   - DOMAIN-KEYWORD,ifastgb,🌐 全球直连
   - DOMAIN-SUFFIX,communication-app.ifastgb.com,🌐 全球直连
   - DOMAIN-SUFFIX,sentry.ifastgb.com,🌐 全球直连
+
+  # ━━━━━━━━━━━━━━ US-券商 ━━━━━━━━━━━━━━━
   # Charles Schwab (嘉信理财)
   - DOMAIN-KEYWORD,schwab,🗽US专线&US券商
   # TD Ameritrade (Thinkorswim)
@@ -2689,11 +2694,21 @@ rules:
   - DOMAIN-SUFFIX,chief-deposit.zft2025.com,🌐 全球直连
   - DOMAIN-SUFFIX,chief-deposit.chiefgroup.com.hk,🌐 全球直连
   - DOMAIN-KEYWORD,chieftrader,🌐 全球直连
+  #          (盈立证券)
+
+
+# Giga money (腾达证券)
+
+
+#          (卓锐证券)
+
+
+#          (复星国际证券)
   # 国际支付 (Wise)
   - DOMAIN-KEYWORD,wise.com,🌐 全球直连
   # 国际支付 (PayPal)
   - DOMAIN-KEYWORD,paypal,🌐 全球直连
-  # ━━━━━━━━━━━━━━ 游戏 / 数娱 ━━━━━━━━━━━━━━
+  # ━━━━━━━━━━━━━━ 游戏分流 (COC/英雄联盟) ━━━━━━━━━━━━━━
   # Supercell / COC
   - DOMAIN-SUFFIX,clash-static.inbox-staging.supercell.com,COC
   - DOMAIN-SUFFIX,clash-static.inbox.supercell.com,COC
