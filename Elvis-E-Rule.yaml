@@ -2409,7 +2409,7 @@ proxy-groups:
     type: select
     proxies:
       - "🌐 全球直连"
-  - name: "台湾专线(crypto)"
+  - name: "台湾专线(CRYPTO)"
     type: url-test
     url: "http://www.gstatic.com/generate_204"
     interval: 600
@@ -2588,19 +2588,6 @@ proxy-groups:
       - "越南-CMI专线1"
 
 rules:
-  - DOMAIN-KEYWORD,clashofclans,COC # clashofclans
-  - DOMAIN-KEYWORD,api.tech26,🇩🇪 德国 # n26
-  - DOMAIN-SUFFIX,number26,🇩🇪 德国 # n26
-  - DOMAIN-KEYWORD,wnacg,➡️优先使用 # 绅士
-  - DOMAIN-SUFFIX,https://saveinta.com/zh-cn,➡️优先使用
-  - DOMAIN-SUFFIX,https://saveclip.app/zh-cn,➡️优先使用
-  - DOMAIN-KEYWORD,ibkr,DIRECT # 盈透
-  - DOMAIN-KEYWORD,inbox.google,AI # Gmail
-  - DOMAIN-KEYWORD,hsbc,DIRECT # 汇丰香港
-  - DOMAIN-KEYWORD,bochk,DIRECT # 中银香港
-  - DOMAIN-KEYWORD,binance,台湾专线(crypto) # 币安
-  - DOMAIN-KEYWORD,okx,台湾专线(crypto)
-  - DOMAIN-KEYWORD,taobao,🌐 全球直连 # 淘宝
  # ━━━━━━━━━━━━━━ 基础网络与局域网 ━━━━━━━━━━━━━━
   # Localhost & LAN
   - DOMAIN,localhost,🌐 全球直连
@@ -2640,11 +2627,16 @@ rules:
   - DOMAIN-KEYWORD,claude,AI
     # ━━━━━━━━━━━━━━ Web3 CRYPTO&TRADING ━━━━━━━━━━━━━━
   # Binance
-  - DOMAIN-SUFFIX,binance.com,台湾专线(crypto)
+  - DOMAIN-SUFFIX,binance.com,台湾专线(CRYPTO)
+  - DOMAIN-KEYWORD,binance,台湾专线(CRYPTO) # 币安
   # Bitget
-  - DOMAIN-SUFFIX,appapi.bitget.com,台湾专线(crypto)
-  - DOMAIN-SUFFIX,stream.bitget.com,台湾专线(crypto)
-  - DOMAIN-SUFFIX,testimg.bitgetapp.com,台湾专线(crypto)
+  - DOMAIN-SUFFIX,appapi.bitget.com,台湾专线(CRYPTO)
+  - DOMAIN-SUFFIX,stream.bitget.com,台湾专线(CRYPTO)
+  - DOMAIN-SUFFIX,testimg.bitgetapp.com,台湾专线(CRYPTO)
+
+  # OKX
+  - DOMAIN-KEYWORD,okx,台湾专线(CRYPTO)
+
   # Plasma
   - DOMAIN-KEYWORD,plasma,🗽US专线&US券商
   # TradingView
@@ -2658,6 +2650,14 @@ rules:
   - DOMAIN-SUFFIX,touch.ccb.com,🌐 全球直连
   - DOMAIN-SUFFIX,xc.mobile3.ccb.cn,🌐 全球直连
   - DOMAIN-SUFFIX,mbs.ccb.com,🌐 全球直连
+ # HSBC (汇丰银行)
+  - DOMAIN-SUFFIX,hsbc.com,🌐 全球直连
+  - DOMAIN-KEYWORD,hsbc,🌐 全球直连 # 汇丰香港
+
+   # Bank of China (中国银行)
+  - DOMAIN-SUFFIX,bankofchina.com,🌐 全球直连
+  - DOMAIN-KEYWORD,bochk,DIRECT # 中银香港
+
   # WeLab Bank
   - DOMAIN-SUFFIX,welab.bank,🌐 全球直连
   - DOMAIN-KEYWORD,welab.bank,🌐 全球直连
@@ -2671,6 +2671,8 @@ rules:
   - DOMAIN-SUFFIX,engagementplatform.n26.com,🇩🇪 德国
   - DOMAIN-KEYWORD,n26.com,🇩🇪 德国
   - DOMAIN-SUFFIX,engagementplatform.n26.com,🇩🇪 德国
+  - DOMAIN-KEYWORD,api.tech26,🇩🇪 德国 # n26
+  - DOMAIN-SUFFIX,number26,🇩🇪 德国 # n26
   # iFAST Global Bank
   - DOMAIN-KEYWORD,ifastgb,🌐 全球直连
   - DOMAIN-SUFFIX,communication-app.ifastgb.com,🌐 全球直连
@@ -2682,8 +2684,9 @@ rules:
   # TD Ameritrade (Thinkorswim)
   - DOMAIN-KEYWORD,thinkorswim,🗽US专线&US券商
   # Interactive Brokers (盈透证券)
-  - DOMAIN-KEYWORD,interactivebrokers,🗽US专线&US券商
-  - DOMAIN-SUFFIX,ibkr,🗽US专线&US券商
+  - DOMAIN-KEYWORD,ibkr,DIRECT # 盈透
+  - DOMAIN-KEYWORD,interactivebrokers,DIRECT # 盈透
+  - DOMAIN-SUFFIX,ibkr,DIRECT # 盈透
   # Firstrade (第一证券)
   - DOMAIN-KEYWORD,firstrade,🗽US专线&US券商
   # ━━━━━━━━━━━━━━ HK-券商 ━━━━━━━━━━━━━━
@@ -2714,6 +2717,7 @@ rules:
   - DOMAIN-SUFFIX,clash-static.inbox.supercell.com,COC
   - DOMAIN-SUFFIX,clashofclans.inbox.supercell.com,COC
   - DOMAIN-SUFFIX,id.supercell.com,COC
+  - DOMAIN-KEYWORD,clashofclans,COC # clashofclans
   # Riot Games / League of Legends
   - DOMAIN-SUFFIX,mlol.qt.qq.com,🌐 全球直连
   # Epic Games
@@ -2825,12 +2829,28 @@ rules:
   - GEOSITE,spotify,🎻 Spotify
   # Twitch
   - GEOSITE,twitch,➡️优先使用
+
+  # ━━━━━━━━━━━━━━ H ━━━━━━━━━━━━━━
+
+  # 绅士
+  - DOMAIN-KEYWORD,wnacg,➡️优先使用 # 绅士
+  
   # MissAV
   - DOMAIN-SUFFIX,missav.ws,➡️优先使用
   - DOMAIN-SUFFIX,client-rapi-missav.recombee.com,➡️优先使用
+  
   # Hanime1
   - DOMAIN-SUFFIX,hanime1.me,H
+  
   # ━━━━━━━━━━━━━━ 国内 App 与字节系全家桶 (彻底直连) ━━━━━━━━━━━━━━
+
+  # ALIBABA
+  - DOMAIN-SUFFIX,alibaba.com,🌐 全球直连
+  - DOMAIN-KEYWORD,taobao,🌐 全球直连 # 淘宝
+
+
+
+
   # ByteDance / Douyin
   - DOMAIN-SUFFIX,douyin.com,🌐 全球直连
   - DOMAIN-SUFFIX,iesdouyin.com,🌐 全球直连
@@ -2871,6 +2891,7 @@ rules:
   # China Domestic Misc
   - IP-CIDR,203.119.206.9/32,🌐 全球直连
   # Google
+  - DOMAIN-KEYWORD,inbox.google,AI # Gmail
   - GEOSITE,google,➡️优先使用
   - DOMAIN-SUFFIX,play.googleapis.com,➡️优先使用
   - DOMAIN-SUFFIX,oauthaccountmanager.googleapis.com,➡️优先使用
@@ -2880,8 +2901,13 @@ rules:
   - DOMAIN-SUFFIX,push.clients6.google.com,➡️优先使用
   # Microsoft
   - GEOSITE,microsoft,Ⓜ️ 微软服务[直连]
-  # ━━━━━━━━━━━━━━ 私有域名━━━━━━━━━━━━━━
+    # ━━━━━━━━━━━━━━ 解析服务 ━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,https://saveinta.com/zh-cn,➡️优先使用
+  - DOMAIN-SUFFIX,https://saveclip.app/zh-cn,➡️优先使用
+
+  # ━━━━━━━━━━━━━━ 私有域名 ━━━━━━━━━━━━━━
   - DOMAIN-SUFFIX,elviscjngood.ccwu.cc,➡️优先使用
+
   # Routing Fallback
   - GEOSITE,cn,🌐 全球直连
   - GEOIP,CN,🌐 全球直连
