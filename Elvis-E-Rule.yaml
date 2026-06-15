@@ -2362,13 +2362,13 @@ proxy-groups:
     proxies:
       - "TEST3-CJNTEST3"
       - "🇺🇸 美国节点"
-  - name: "🪙 Paypal[直连]"
+  - name: "🪙 Paypal"
     type: url-test
     url: "http://www.gstatic.com/generate_204"
     interval: 600
     tolerance: 100
     proxies:
-      - "🌐 全球直连"
+      - "🗽US专线&US券商"
   - name: "📖 Reddit"
     type: url-test
     url: "http://www.gstatic.com/generate_204"
@@ -2710,7 +2710,7 @@ rules:
   # 国际支付 (Wise)
   - DOMAIN-KEYWORD,wise.com,🌐 全球直连
   # 国际支付 (PayPal)
-  - DOMAIN-KEYWORD,paypal,🌐 全球直连
+  - DOMAIN-KEYWORD,paypal,🪙 Paypal
   # ━━━━━━━━━━━━━━ 游戏分流 (COC/英雄联盟) ━━━━━━━━━━━━━━
   # Supercell / COC
   - DOMAIN-SUFFIX,clash-static.inbox-staging.supercell.com,COC
