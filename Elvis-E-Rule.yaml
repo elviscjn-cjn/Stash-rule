@@ -2333,6 +2333,7 @@ proxy-groups:
     tolerance: 100
     proxies:
       - "➡️优先使用"
+      - "专线"
   - name: "🎥 Netflix"
     type: url-test
     url: "http://www.gstatic.com/generate_204"
@@ -2815,12 +2816,12 @@ rules:
 
   # ━━━━━━━━━━━━━━ 视频 / 流媒体 ━━━━━━━━━━━━━━
   # YouTube / Google Video
-  - DOMAIN-SUFFIX,www.youtube.com,➡️优先使用
-  - DOMAIN-KEYWORD,youtube,➡️优先使用
-  - DOMAIN-SUFFIX,yt3.googleusercontent.com,➡️优先使用
-  - DOMAIN-SUFFIX,rr3---sn-i3belney.googlevideo.com,➡️优先使用
-  - DOMAIN-SUFFIX,rr4---sn-un57snee.googlevideo.com,CDN
-  - DOMAIN-SUFFIX,rr5---sn-oji3bc-5n.googlevideo.com,➡️优先使用
+  - DOMAIN-SUFFIX,www.youtube.com,📹 YouTube
+  - DOMAIN-KEYWORD,youtube,📹 YouTube
+  - DOMAIN-SUFFIX,yt3.googleusercontent.com,📹 YouTube
+  - DOMAIN-SUFFIX,rr3---sn-i3belney.googlevideo.com,📹 YouTube
+  - DOMAIN-SUFFIX,rr4---sn-un57snee.googlevideo.com,📹 YouTube
+  - DOMAIN-SUFFIX,rr5---sn-oji3bc-5n.googlevideo.com,📹 YouTube
   # Netflix
   - GEOSITE,netflix,🎥 Netflix
   # Disney+
@@ -2828,7 +2829,7 @@ rules:
   # Spotify
   - GEOSITE,spotify,🎻 Spotify
   # Twitch
-  - GEOSITE,twitch,➡️优先使用
+  - GEOSITE,twitch,📹 YouTube
 
   # ━━━━━━━━━━━━━━ H ━━━━━━━━━━━━━━
 
